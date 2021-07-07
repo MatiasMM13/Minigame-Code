@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  body {
+    background-color: lightgray;
+  } 
+  .tilted {
+    float: right;
+    background-color: #626261;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  li, p {
+    background-color: white;
+    color: black;
+  } 
+  </style>
+  <script>
+    function lotto() {
+      var lotto = document.getElementById("lotto");
+      var lottoValue = lotto.value;
+      if(lottoValue == 5610) {
+        alert("You Won!");
+        return true;
+     }
+     alert("Oops! Try Again!");
+     return false;
+  }
+ </script>
+ </head>
+ <body>
+   <div class="tilted">
+      <p>Instructions:<br>Choose one of the 5 lucky codes below into the input box.<br>If you type in a certain code, you'll win!</p>
+      <ol>
+        <li>7289</li>
+        <li>2346</li>
+        <li>5610</li>
+        <li>4908</li>
+        <li>1620</li>
+      </ol>
+      <input id="lotto" type="text" placeholder="Code:"/> <input type="submit" onclick="return lotto();" value="Submit"/>
